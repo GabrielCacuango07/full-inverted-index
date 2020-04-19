@@ -57,9 +57,9 @@ def get_positions(token, docs):
         if token in doc:
             indexes = [i for i, x in enumerate(doc) if x == token]
             matches.append([docs.index(doc), len(indexes), [indexes]])
-        all_matches.append(matches)
+        if matches:
+            all_matches.append(matches)
     return all_matches
-
 
 
 #['to', [[0, 4, [[0, 3, 5, 8]]]], [[1, 2, [[0, 4]]]], [], []]
