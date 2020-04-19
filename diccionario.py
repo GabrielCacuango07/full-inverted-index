@@ -61,5 +61,9 @@ def get_positions(token, docs):
     return all_matches
 
 
-mm = get_positions('to', docs)
-print(mm)
+
+#['to', [[0, 4, [[0, 3, 5, 8]]]], [[1, 2, [[0, 4]]]], [], []]
+new_dictonary = []
+for token in my_dict:
+    new_dictonary.append(get_positions(token, docs))
+    print(get_positions(token, docs))
